@@ -1,0 +1,9 @@
+C:\Users\staer\Desktop\ToDoListSQL\taskSave.db
+16
+true
+true
+false
+FinishedTasks
+FinishedTasks
+Rage
+True

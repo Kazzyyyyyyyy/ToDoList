@@ -1,0 +1,114 @@
+﻿<Window x:Class="ToDoList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Icon="ToDoListIcon.ico"
+        Title="ToDoList" Height="450" Width="800" 
+        Background="#1E1E1E" 
+        
+        KeyDown="Window_KeyDown" >
+
+    
+    <!--MainGrid-->
+    <Grid Margin="10" >
+        <Grid Name="MainWindowGrid">
+
+
+            <!--ColumnAndRows-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+
+            <!--MainControll-->
+            <TextBox Name="GUI_taskInpText" Grid.Row="0" Grid.Column="0" Margin="5" Height="30" />
+
+            <Button Name="GUI_confirmButton" Content="CONFIRM" Grid.Row="0" Grid.Column="1" Margin="5, 5, 50, 5" Height="30"
+                Click="GUI_confirmButton_Click" />
+
+            <Button Name="GUI_settingsButton" Content="⚙️" Grid.Row="0" Grid.Column="1" Height="30" Margin="215, 5, 5, 5" 
+                Click="GUI_settingsButton_Click" />
+
+
+            <!--OutPuts-->
+            <ListBox Name="GUI_taskList" Grid.Row="1" Grid.Column="0" Margin="5" />
+
+            <Grid Grid.Row="2" Height="35" Background="#2D2D30" Margin="5, 7.5, 5, 2.5">
+                <TextBlock Name="GUI_outputTextBlock" Grid.Column="0" Margin="5"
+               TextWrapping="Wrap" Padding="5" />
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="2" Background="#2D2D30" Margin="5, 5, 5, 2.5" >
+                <TextBlock Name="GUI_profileSelectedTextBlock" Grid.Column="1" Margin="5" 
+               TextWrapping="Wrap" Padding="5" VerticalAlignment="Center" Text="No profile loaded" Height="26" />
+            </Grid>
+
+            
+            <!--Control stuff grid zeug-->
+            <Grid Grid.Row="1" Grid.Column="1" >
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!--ComboBoxes-->
+                <StackPanel Margin="5,5,5,0" VerticalAlignment="Top" >
+
+                    <ComboBox Name="GUI_cmdComboBox" Margin="0,5" HorizontalContentAlignment="Center">
+                        <ComboBoxItem Content="Add" />
+                        <ComboBoxItem Content="Remove (all)" />
+                        <ComboBoxItem Content="Edit" />
+                        <ComboBoxItem Content="Undo" />
+                        <ComboBoxItem Content="Check" />
+                    </ComboBox>
+
+                    <ComboBox x:Name="GUI_prioComboBox" HorizontalContentAlignment="Center" Margin="0,5">
+                        <ComboBoxItem Content="Low" />
+                        <ComboBoxItem Content="Medium" />
+                        <ComboBoxItem Content="High" />
+                        <ComboBoxItem Content="Urgent" />
+                        <ComboBoxItem Content="Default" />
+                    </ComboBox>
+
+                    <ComboBox x:Name="GUI_profileCommandComboBox" HorizontalContentAlignment="Center" Margin="0, 25 0, 5"  >
+                        <ComboBoxItem Content="Add Profile" />
+                        <ComboBoxItem Content="Remove Profile" />
+                        <ComboBoxItem Content="Load Profile" />
+                    </ComboBox>
+
+                    <ComboBox x:Name="GUI_profileSelectComboBox" HorizontalContentAlignment="Center" Margin="0,5" />
+                </StackPanel>
+
+                <!--Timer-->
+                <Grid Grid.Row="1" Grid.Column="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="GUI_timerSafeButton" Click="GUI_timerButtons_Click" Grid.Column="2" Height="20" Content="SAVE" VerticalAlignment="Top" Margin="5" />
+                    
+                    <Button x:Name="GUI_timerStartButton" Click="GUI_timerButtons_Click" Grid.Row="0" Grid.Column="0" Height="20" Content="START" VerticalAlignment="Top" Margin="5" />
+                    <Button x:Name="GUI_timerStopButton" Click="GUI_timerButtons_Click" Grid.Column="1" Height="20" Content="STOP" VerticalAlignment="Top" Margin="5" />
+                    <Button x:Name="GUI_timerResetButton" Click="GUI_timerButtons_Click" Grid.Column="0" Height="20" Content="RESET" VerticalAlignment="Top" Margin="5,30,5,0" />
+                    <Button x:Name="GUI_timerSetButton" Click="GUI_timerButtons_Click" Grid.Column="1" Height="20" Content="SET" VerticalAlignment="Top" Margin="5,30,5,0" />
+                    <TextBlock x:Name="GUI_timerOutPutTextBlock" Grid.Column="0" HorizontalAlignment="Left" Padding="5" Height="26" VerticalAlignment="Top" Margin="5, 50, 5,0" />
+                </Grid>
+            </Grid>
+        </Grid>
+        
+        <!--Frame-->
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>
