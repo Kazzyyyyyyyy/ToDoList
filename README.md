@@ -19,11 +19,23 @@ The only thing I literally just copy-pasted was the MainWindow GUI and the App.x
 I learned all of the C#/WPF and SQLite basics while working on this.
 Even though the codebase is nothing you want to work on in any case, Im still pretty proud of it considering its my first real C# project.
 
+---------------------------------------------------
+
 
 <img width="1178" height="661" alt="1" src="https://github.com/user-attachments/assets/775dcbaf-8776-44f6-9267-aec4d28b598c" />
+
+
 <img width="1179" height="662" alt="2" src="https://github.com/user-attachments/assets/778c4c93-81fd-4a55-8f12-cfbe84aaeb51" />
+
+
 <img width="1190" height="661" alt="3" src="https://github.com/user-attachments/assets/0b464e49-086a-44b4-9aca-c44276fe9148" />
+
+
 <img width="1193" height="661" alt="4" src="https://github.com/user-attachments/assets/6e7bad51-f49a-49fa-ba45-d6e96d52194d" />
+
+
 <img width="1193" height="662" alt="5" src="https://github.com/user-attachments/assets/69684c28-eaea-41bc-8189-6afa85f95f7e" />
+
+
 <img width="1178" height="661" alt="6" src="https://github.com/user-attachments/assets/5995a20d-a9eb-4ce7-9221-29777c9d1d81" />
 
